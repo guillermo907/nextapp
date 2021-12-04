@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
-  height: 60vh;
+  height: ${(props) => props.height};
 
   .video-container {
     position: relative;
@@ -33,7 +33,7 @@ const VideoContainer = styled.div`
 
 const Videobanner = (props) => {
   return (
-    <VideoContainer>
+    <VideoContainer height={props.height}>
       <div className="video-container">
         <video muted loop autoPlay>
           <source src="lake_video.mp4" type="video/mp4" />
