@@ -4,13 +4,18 @@ import styled from 'styled-components';
 const VideoContainer = styled.div`
   position: relative;
   overflow: hidden;
+  height: 60vh;
 
   .video-container {
     position: relative;
+    height: 100%;
   }
   video {
-    width: 120%;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    //contain: size; //Makes it fill
+    inline-size: auto;
   }
   .content {
     position: absolute;
@@ -34,7 +39,7 @@ const Videobanner = (props) => {
           <source src="lake_video.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="content glass">{props.children}</div>
+      <div className="content">{props.children}</div>
     </VideoContainer>
   );
 };

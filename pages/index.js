@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styled, { createGlobalStyle } from 'styled-components';
 import Banner from '../components/Banner';
+import Signcard from '../components/Signcard';
 import Videobanner from '../components/Videobanner';
 
 const Main = styled.main`
@@ -31,7 +32,7 @@ export default function Home() {
         color="white"
       />
       <Videobanner>
-        <h1>Banner</h1>
+        <Signcard />
       </Videobanner>
     </div>
   );
