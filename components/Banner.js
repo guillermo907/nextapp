@@ -18,13 +18,19 @@ const BannerCont = styled.div`
 
   .banner-card {
     background-color: ${(props) => props.cardColor};
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 60%;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .banner-card {
+      width: 100%;
+    }
   }
 `;
 
