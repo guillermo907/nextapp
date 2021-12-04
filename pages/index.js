@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styled, { createGlobalStyle } from 'styled-components';
 import Banner from '../components/Banner';
+import Videobanner from '../components/Videobanner';
 
 const Main = styled.main`
   display: flex;
@@ -29,6 +30,9 @@ export default function Home() {
         bgColor="rgba(255, 255, 255, 0.75)"
         color="white"
       />
+      <Videobanner>
+        <h1>Banner</h1>
+      </Videobanner>
     </div>
   );
 }
