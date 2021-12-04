@@ -29,11 +29,21 @@ export default function Home() {
         title="Banner"
         subtitle="subtitle"
         bgColor="rgba(255, 255, 255, 0.75)"
+        cardColor="var(--color-one)"
         color="white"
+        img="https://images.unsplash.com/photo-1527079739242-736e10a5fbb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2274&q=80"
       />
       <Videobanner>
         <Signcard />
       </Videobanner>
+      <Banner
+        title="Banner"
+        subtitle="subtitle"
+        bgColor="rgba(255, 255, 255, 0.80)"
+        cardColor="var(--color-three)"
+        color="white"
+        img="https://redapes.org/wp-content/uploads/2020/08/JoJo-OO-homepage.jpg"
+      />
     </div>
   );
 }
