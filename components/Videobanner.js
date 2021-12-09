@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const VideoContainer = styled.div`
@@ -17,6 +17,15 @@ const VideoContainer = styled.div`
     //contain: size; //Makes it fill
     inline-size: auto;
   }
+  .pause-btn {
+    color: var(--color-four);
+    position: absolute;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    z-index: 9999;
+  }
   .content {
     position: absolute;
     z-index: 999;
@@ -32,12 +41,30 @@ const VideoContainer = styled.div`
 `;
 
 const Videobanner = (props) => {
+  const [play, setPlay] = useState(true);
+
   return (
     <VideoContainer height={props.height}>
       <div className="video-container">
-        <video muted loop autoPlay>
+        <video
+          className="video-background"
+          muted
+          loop
+          autoPlay={play ? true : false}
+        >
           <source src="lake_video.mp4" type="video/mp4" />
         </video>
+        <button
+          className="pause-btn"
+          onClick={() => {
+            play
+              ? document.querySelector('.video-background').pause()
+              : document.querySelector('.video-background').play();
+            setPlay(!play);
+          }}
+        >
+          Play
+        </button>
       </div>
       <div className="content">{props.children}</div>
     </VideoContainer>
